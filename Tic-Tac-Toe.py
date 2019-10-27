@@ -118,10 +118,7 @@ def new_game_variables():
     global player_turn
     player_turn = 1
 
-
-
-
-    
+   
 #creates variables for the squares.
 a1 = 'a'
 a2 = 'a'
@@ -138,4 +135,3 @@ second_player = False
 
 #Sets the players turn to player 1
 player_turn = 1
-
