@@ -9,9 +9,30 @@ def play_game():
     #if it hasn't then assign that location to player x
     #Change the players turn.
     ###
-   pass 
+
+    #Creating the Variables for the squares.
+    a1 = 'a'
+    a2 = 'a'
+    a3 = 'a'
+    b1 = 'a'
+    b2 = 'a'
+    b3 = 'a'
+    c1 = 'a'
+    c2 = 'a'
+    c3 = 'a'
+
+    #Sets second player to false at start.
+    second_player = False
+
+    #Sets the players turn to player 1
+    player_turn = 1
+        
+    welcome()
+    number_of_players()
+   
 
 def welcome():
+#Prints a welcome message.
     print('''
 X O X O X O X O
 X Tic-Tac-Toe O
@@ -21,6 +42,7 @@ X O X O X O X O
     ''')
     
 def display_board():
+#Displays the board.
     print('''
 
    | 1 | 2 | 3 |
@@ -38,8 +60,27 @@ def display_board():
                B1=show_symbol(b1), B2=show_symbol(b2), B3=show_symbol(b3),
                C1=show_symbol(c1), C2=show_symbol(c2), C3=show_symbol(c3)))
 
+def show_symbol(y):
+    #This Function determines what to show in the square in display board.
+    #Either an X, O or a space.
+    if y.lower() == 'x':
+        return 'X'
+    elif y.lower() == 'o':
+        return 'O'
+    else:
+        return ' '
+
 def number_of_players():
-    pass
+    #Gets the number of players and sets the second_player variable
+    global second_player
+    x = input('Please enter how many players, 1 or 2:')
+    print(x)
+    if x == '2':
+        second_player = True
+        print('There are 2 players')
+    else:
+        second_player = False
+    
 
 def get_player_input():
    pass 
@@ -56,21 +97,7 @@ def computer_turn():
 def check_win():
     pass
 
-def show_symbol(y):
-    if y.lower() == 'x':
-        return 'X'
-    elif y.lower() == 'o':
-        return 'O'
-    else:
-        return ' '
 
-welcome()
-a1 = 'a'
-a2 = 'a'
-a3 = 'a'
-b1 = 'a'
-b2 = 'a'
-b3 = 'a'
-c1 = 'a'
-c2 = 'a'
-c3 = 'a'
+
+
+
